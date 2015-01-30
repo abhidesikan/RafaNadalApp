@@ -59,29 +59,32 @@ public final class R {
         public static final int ic_livescore=0x7f020005;
         public static final int ic_news=0x7f020006;
         public static final int ic_schedule=0x7f020007;
-        public static final int ic_stats=0x7f020008;
-        public static final int list_item_bg_normal=0x7f020009;
-        public static final int list_item_bg_pressed=0x7f02000a;
-        public static final int list_selector=0x7f02000b;
+        public static final int ic_splash=0x7f020008;
+        public static final int ic_stats=0x7f020009;
+        public static final int list_item_bg_normal=0x7f02000a;
+        public static final int list_item_bg_pressed=0x7f02000b;
+        public static final int list_selector=0x7f02000c;
     }
     public static final class id {
-        public static final int counter=0x7f0a0005;
+        public static final int counter=0x7f0a0006;
         public static final int drawer_layout=0x7f0a0000;
         public static final int frame_container=0x7f0a0001;
-        public static final int icon=0x7f0a0003;
+        public static final int icon=0x7f0a0004;
+        public static final int imgLogo=0x7f0a0003;
         public static final int list_slidermenu=0x7f0a0002;
-        public static final int title=0x7f0a0004;
-        public static final int txtLabel=0x7f0a0006;
+        public static final int title=0x7f0a0005;
+        public static final int txtLabel=0x7f0a0007;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int drawer_list_item=0x7f030001;
-        public static final int fragment_blog=0x7f030002;
-        public static final int fragment_home=0x7f030003;
-        public static final int fragment_live_score=0x7f030004;
-        public static final int fragment_news=0x7f030005;
-        public static final int fragment_schedule=0x7f030006;
-        public static final int fragment_stats=0x7f030007;
+        public static final int activity_splash=0x7f030001;
+        public static final int drawer_list_item=0x7f030002;
+        public static final int fragment_blog=0x7f030003;
+        public static final int fragment_home=0x7f030004;
+        public static final int fragment_live_score=0x7f030005;
+        public static final int fragment_news=0x7f030006;
+        public static final int fragment_schedule=0x7f030007;
+        public static final int fragment_stats=0x7f030008;
     }
     public static final class menu {
         public static final int main=0x7f090000;
