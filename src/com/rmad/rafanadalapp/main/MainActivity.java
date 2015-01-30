@@ -11,6 +11,7 @@ import com.rmad.rafanadalapp.fragment.LiveScoreFragment;
 import com.rmad.rafanadalapp.fragment.NewsFragment;
 import com.rmad.rafanadalapp.fragment.ScheduleFragment;
 import com.rmad.rafanadalapp.fragment.StatsFragment;
+import com.rmad.rafanadalapp.fragment.TriviaFragment;
 
 import android.R.drawable;
 import android.app.Activity;
@@ -86,6 +87,8 @@ public class MainActivity extends Activity {
 		// Blog
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons
 				.getResourceId(5, -1), true, "50+"));
+		//Triva
+		navDrawerItems.add(new NavDrawerItem(navMenuTitles[6], navMenuIcons.getResourceId(6, -1)));
 
 		// Recycle the typed array
 		navMenuIcons.recycle();
@@ -171,6 +174,8 @@ public class MainActivity extends Activity {
 		case 5:
 			fragment = new BlogFragment();
 			break;
+		case 6:
+			fragment = new TriviaFragment();
 
 		default:
 			break;
