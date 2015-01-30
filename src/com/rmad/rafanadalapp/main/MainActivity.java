@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends Activity {
@@ -111,10 +112,37 @@ public class MainActivity extends Activity {
 
 		mDrawerLayout.setDrawerListener(mDrawerToggle);
 
-		// if (savedInstanceState == null) {
-		// // on first time display view for first nav item
-		// displayView(0);
-		// }
+		 if (savedInstanceState == null) {
+		 // on first time display view for first nav item
+			 displayView(0);
+		 }
+		
+		mDrawerList.setOnClickListener(new SlideMenuClickListener());
+		
+		 /**
+	     * Slide menu item click listener
+	     * */
+	    private class SlideMenuClickListener implements ListView.OnItemClickListener {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				// TODO Auto-generated method stub
+				
+			}
+	       
+	    }
+	    
+	    /**
+	     * Diplaying fragment view for selected nav drawer list item
+	     * */
+	    
+	    private void displayView(int position){
+	    	
+	    }
+		
+		
+		
 	}
 
 	@Override
@@ -129,13 +157,8 @@ public class MainActivity extends Activity {
 		if (mDrawerToggle.onOptionsItemSelected(item)) {
 			return true;
 		}
-		// Handle action bar actions click
-		switch (item.getItemId()) {
-		case R.id.action_settings:
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
-		}
+		return super.onOptionsItemSelected(item);
+
 	}
 	
 	  /***
@@ -144,8 +167,8 @@ public class MainActivity extends Activity {
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         // if nav drawer is opened, hide the action items
-        boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-        menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
+//        boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
+//        menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
  
