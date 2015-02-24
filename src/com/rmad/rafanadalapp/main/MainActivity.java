@@ -3,6 +3,7 @@ package com.rmad.rafanadalapp.main;
 import java.util.ArrayList;
 
 import com.rmad.rafanadalapp.R;
+import com.rmad.rafanadalapp.db.Database;
 import com.rmad.rafanadalapp.drawer.NavDrawerItem;
 import com.rmad.rafanadalapp.drawer.NavDrawerListAdapter;
 import com.rmad.rafanadalapp.fragment.BlogFragment;
@@ -19,6 +20,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
@@ -49,11 +51,16 @@ public class MainActivity extends Activity {
 	private ArrayList<NavDrawerItem> navDrawerItems;
 	private NavDrawerListAdapter adapter;
 
+	private MenuItem mRefreshMenuItem;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		
+
+	    		
 		mTitle = mDrawerTitle = getTitle();
 
 		// load slide menu items
@@ -201,6 +208,9 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.main, menu);
+		mRefreshMenuItem = menu.findItem(R.id.action_refresh);
+		mRefreshMenuItem.setVisible(false);
+		
 		return true;
 	}
 
